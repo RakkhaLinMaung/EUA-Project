@@ -1,0 +1,283 @@
+/* ----------------- Rakkha Responsive Classes  2023------------*/
+
+@media screen and (max-width: 980px) {
+    body {
+        width: auto;
+    }
+
+    .hamburger {
+        position: absolute;
+        display: flex;
+        z-index: 6;
+        right: 45pt;
+        height: 15pt;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: dodgerblue;
+        z-index: 9;
+        overflow: hidden;
+        transition: 1s;
+    }
+
+    nav.active {
+        height: 100vh;
+        transition: 1s;
+    }
+
+
+    nav .loginbtn {
+        background-color: transparent;
+        width: 100px;
+        height: 30px;
+        border-radius: 13px;
+        padding: 0;
+        margin: 0;
+        border: 2px solid white;
+        transform: translateX(-8px);
+    }
+
+    .showcase {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ------------ Show Case -------------*/
+
+    .showcase .big {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .big img {
+        position: absolute;
+        width: 180px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .eua-container {
+        width: 100%;
+        height: auto;
+        margin-top: 20pt;
+        padding: 22pt;
+    }
+
+    .eua-container .para {
+        text-align: justify;
+    }
+
+    .homereview {
+        width: 100%;
+        /* background-color: red; */
+        padding: 12pt;
+        margin: 0;
+    }
+
+    .homereview .name, .homereview .address {
+        padding: 5px;
+        margin-left: 1%;
+    }
+
+
+    /* ------------footer------------ */
+
+    .sponsor {
+        width: 100%;
+    }
+
+    .yoma {
+        width: 120px;
+    }
+
+    .kbz {
+        width: 110px;
+    }
+
+    .mp {
+        width: 60px;
+    }
+
+    .moht {
+        width: 60px;
+    }
+
+    .union {
+        width: 90px;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .sub-footer{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 0;
+        padding: 3em;
+        padding-top: 6em;
+        padding-bottom: 6em;
+        font-size: 10pt;
+    }
+    
+    .sub-footer div{ /* Common (related with all div in footer)*/
+        text-align: left;
+    }
+
+    .col-1 {
+        width: 30%;
+    }
+    
+    .col-1 a{
+        display: block;
+        text-decoration: none;
+        color: #efefef;
+        margin-bottom: 20px;
+    }
+    
+    
+    .col-2{
+        width: 40%;
+        flex-grow: 3;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-2 h3 {
+        text-align: center;
+    }
+
+    .col-2 form {
+        text-align: center;
+    }
+    
+    .cont-heading{  /* related with all sub-footer h3 */
+        font-weight: 700;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        color: #ffffffbd;
+    }
+    
+    
+    .col-2 form input{
+        width: 200px;
+        height: 35px;
+        border-radius: 4px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        outline: none;
+        border: none;
+    }
+    
+    .col-2 form input:focus {
+        border: 2px solid #2f00ffba;
+        transition: 0.1s;
+    }
+    
+    
+    .col-2 form button{
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 30px;
+        padding: 10px 30px;
+        cursor: pointer;
+        font-size: 9pt;
+    }
+    
+    .col-2 form button:hover {
+        transition: 0.6s;
+        border: 2px solid #8b79ff;
+        color: #c1d4ad
+    }
+
+    .col-3 {
+        width: 30%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-3 h3, .col-3 p, .col-3 div {
+        text-align: right;
+    }
+
+
+    
+    
+    .social-icons{
+        margin-top: 30px;
+    }
+    
+    
+    .social-icons i{
+        font-size: 22px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    .navigatetotop {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        margin-right: 22pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(90deg) translateX(-55pt);
+    }
+    
+    .navigatetotop img {
+        width: 30px;
+        height: 30px;
+        border-image-outset: 0cqh;
+        border-radius: 12px;
+        border: 1px solid #384990;
+    }
+
+    /* -------------- Footer End -----------------*/
+    /* -----------------------Home -------------------- */
+
+
+    /* -----------------------About us -------------------- */
+
+    .line {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .review {
+        text-align: justify;
+    }
+
+
+
+
+
+
+}

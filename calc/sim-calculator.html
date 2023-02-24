@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple calculator</title>
+  <link type="text/css" rel="stylesheet" href="../res/main.css">
+  <link type="text/css" rel="stylesheet" href="../res/responsive.css">
+  <style>
+    .wrapper-sim {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(./img/bg.jpg);
+      background-size: cover;
+    }
+
+    #calculator {
+      width: 350px;
+      height: auto;
+      border: 1px solid green;
+      padding: 15pt;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to left, #41e685, #d89400);
+    }
+
+    #calculator.active {
+      background: black;
+      color: white;
+    }
+
+    #result {
+      width: 100%;
+      padding: 4px;
+      height: 40px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      box-shadow: 1px 2px 15px rgb(41, 121, 121);
+      color: rgb(20, 0, 202);
+      text-align: right;
+      font-size: 14pt;
+      overflow: hidden;
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .buttons {
+      width: 70px;
+      height: 70px;
+      background-color: #35363669;
+      color: white;
+      margin: 5px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid bisque;
+    }
+
+    .buttons.equal {
+      width: 140px;
+      border-radius: 5px;
+    }
+
+    .brief-description {
+      position: fixed;
+      bottom: 0pt;
+      padding: 0 12pt 0 12pt;
+      font-size: 8pt;
+      background-color: #080808b4;
+      color: white;
+      width: 100%;
+      z-index: 0;
+      font-size: 13pt;
+    }
+
+    .brief-description::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 15px;
+      transform: translateY(1px);
+      background-color: rgb(255, 255, 255);
+      animation: sparkle 0.4s infinite;
+    }
+
+    @keyframes sparkle {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .heading {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+
+    h3 {
+      width: 180px;
+      height: 40px;
+      color: aqua;
+      text-align: left;
+      /* background-color: red; */
+    }
+
+    .mood-btn {
+      width: 20px;
+      height: 20px;
+      margin-left: 5pt;
+      cursor: pointer;
+      fill: black;
+    }
+
+    .mood-btn:hover,
+    .mood-btn.active {
+      fill: #ffffff;
+      transition: 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="blog-title">
+      <a href="" class="tit">EUA Project</a>
+    </div>
+    <div class="hamburger">
+      <div class="hamburger-btn"></div>
+    </div>
+    <nav id='MenuItems'>
+      <a href='../index.html'>Home</a>
+      <a href='../pages/aboutus.html'>About Us</a>
+      <ul id="menu">
+        <li class="parent"><a href="#">Calculator</a>
+          <ul class="child">
+            <li class="parent">
+              <a href="#">Math<span class="expand"></span></a>
+              <ul class="child">
+                <li><a href="../calc/sim-calculator.html">Simple Calculator</a></li>
+                <li><a href="../calc/mysci-calc.html">Scientific Calculator</a></li>
+                <li><a href="../calc/numerical.html">Numerical Calculator</a></li>
+              </ul>
+            </li>
+            <li class="parent">
+              <a href="#">Health<span class="expand"></span></a>
+              <ul class="child">
+                <li><a href="../calc/bmi.html">BMI Calculator</a></li>
+                <li><a href="#">Coming Soon...</a></li>
+                <li><a href="#">Coming Soon...</a></li>
+              </ul>
+            </li>
+            <li class="parent">
+              <a href="#">Other<span class="expand"></span></a>
+              <ul class="child">
+                <li><a href="#">Length Converter</a></li>
+                <li><a href="/calc/dgclock.html">Digital Clock</a></li>
+                <li><a href="#">Random Num Generator</a></li>
+                <li><a href="#">Currency Converter</a></li>
+                <li><a href="#">Visual Keyboard</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="login-btn" onclick="document.getElementById('login-form').style.display='flex'">Login</a>
+    </nav>
+  </div>
+
+  <!---- Nav finished ----->
+
+
+  <!-- start login form -->
+  <div id='login-form' class='login-page'>
+    <div class="form-box">
+        <div class='button-box'>
+            <div id='btn'></div>
+            <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+            <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+        </div>
+        <form id='login' class='input-group-login'>
+            <input type='text' class='input-field' placeholder='Email Id' required>
+            <input type='password' class='input-field' placeholder='Enter Password' required>
+            <input type='checkbox' class='check-box'><span>Remember Password</span>
+            <button type='submit' class='submit-btn'>Log in</button>
+        </form>
+        <form id='register' class='input-group-register'>
+            <input type='text' class='input-field' placeholder='First Name' required>
+            <input type='text' class='input-field' placeholder='Last Name ' required>
+            <input type='email' class='input-field' placeholder='Email Id' required>
+            <input type='password' class='input-field' placeholder='Enter Password' required>
+            <input type='password' class='input-field' placeholder='Confirm Password' required>
+            <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+            <button type='submit' class='submit-btn'>Register</button>
+        </form>
+    </div>
+</div>
+
+<!-- end login form -->
+  <div class="brief-description">
+
+  </div>
+
+
+  <div class="wrapper-sim">
+    <div id="calculator">
+      <div class="heading">
+        <h3>Simple Calculator</h3>
+        <div class="des-mood" id="mode-text">Light Mood</div>
+        <svg class="mood-btn" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+        </svg>
+      </div>
+      <textarea type="text" id="result"></textarea>
+      <div class="btn">
+        <div class="row">
+          <button class="buttons">CE</button>
+          <button class="buttons">C</button>
+          <button class="buttons text-sm">Delete</button>
+          <button class="buttons">/</button>
+        </div>
+        <div class="row">
+          <button class="buttons">7</button>
+          <button class="buttons">8</button>
+          <button class="buttons">9</button>
+          <button class="buttons">*</button>
+        </div>
+        <div class="row">
+          <button class="buttons">4</button>
+          <button class="buttons">5</button>
+          <button class="buttons">6</button>
+          <button class="buttons">-</button>
+        </div>
+        <div class="row">
+          <button class="buttons">1</button>
+          <button class="buttons">2</button>
+          <button class="buttons">3</button>
+          <button class="buttons">+</button>
+        </div>
+        <div class="row">
+          <button class="buttons col-span-2">0</button>
+          <button class="buttons text-2xl">.</button>
+          <button class="buttons equal">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <h3 class="homesubtitle">Our Affiliations and Memberships</h3><br>
+    <div class="sponsor">
+      <img class="yoma" src="../img/yoma.png">
+      <img class="kbz" src="../img/kbz-logo.png">
+      <img class="mp" src="../img/mp.png">
+      <img class="moht" src="../img/moht.png">
+      <img class="union" src="../img/union.webp">
+      <img class="mandlar" src="../img/mandalarmin.png">
+    </div>
+    <div class="sub-footer">
+      <div class="navigatetotop"><img src="../img/icons/Navigator.png"></div>
+      <div class="col-1">
+        <h3 class="cont-heading">USEFUL LINKS</h3>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Calculator</a>
+        <a href="">Contact</a>
+        <a href="">Login</a>
+      </div>
+      <div class="col-2">
+        <h3 class="cont-heading">NEWSLETTER</h3>
+        <form>
+          <input type="text" placeholder="Your Email Address" required><br>
+          <button type="submit">SUBSCRIBE NOW</button><br><br><br>
+          <p>Developed by EUA Team</p><br>
+          <p>© 2023 EUA Team's Template </p>
+        </form>
+      </div>
+      <div class="col-3">
+        <h3 class="cont-heading">CONTACT</h3>
+        <p>Group-4, EUA Project,<br><br> Naypyitaw, Myanmar.</p>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-telegram"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script type="text/JavaScript" src="../res/act.js"></script>
+<script>
+  //daymode nightmode
+  var calc = document.querySelector('#calculator');
+  var btnMood = document.querySelector('.mood-btn')
+  var desMood = document.querySelector('.des-mood');
+  let menuOpen = false;
+
+  btnMood.addEventListener('click', () => {
+    if (!menuOpen) {
+      calc.classList.add('active');
+      btnMood.classList.add('active');
+      desMood.innerText = "Dark Mood";
+      menuOpen = true;
+    } else {
+      menuOpen = false;
+      calc.classList.remove('active');
+      btnMood.classList.remove('active');
+      desMood.innerText = "Light Mood";
+    }
+  })
+</script>
+
+<script>
+  let result = document.querySelector("#result");
+  let buttons = document.querySelectorAll(".buttons");
+  let des = document.querySelector('.brief-description');
+
+
+  let start = 0;
+  let end = 0;
+  function animate() {
+    setTimeout(animate, 50);
+    var str = "A simple calculator using JavaScript is a program that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division on two input numbers. The calculator can be created using HTML, CSS, and JavaScript. In HTML, you can create a basic layout for the calculator using buttons, text fields, and other UI elements. Then, using CSS, you can style the calculator to make it visually appealing."
+
+    if (end > str.length) {
+      end = 0;
+    }
+
+    end += 1;
+
+    des.innerText = str.slice(start, end)
+  }
+
+  animate()
+
+  result.innerText = "0";
+  let content = "";
+
+  const operations = [
+    {
+      operation: "+",
+      process: (a, b) => a + b
+    },
+    {
+      operation: "-",
+      process: (a, b) => a - b
+    },
+    {
+      operation: "/",
+      process: (a, b) => a / b
+    },
+    {
+      operation: "*",
+      process: (a, b) => a * b
+    }
+  ];
+
+  buttons.forEach((operation) => {
+    operation.addEventListener("click", (e) => {
+      const value = e.target.innerText;
+
+      const getOperation = operations.find((item) =>
+        content.includes(item.operation)
+      );
+
+      if (value === "=") {
+        let [a, b] = content.split(getOperation.operation);
+        const calcuted = getOperation.process(Number(a), Number(b));
+        result.innerText = calcuted;
+        content = String(calcuted);
+
+        return;
+      }
+
+      switch (value) {
+        case "0":
+          if (result.innerText === "0") {
+            result.innerText = "0";
+          } else {
+            content += value;
+            result.innerText = content;
+          }
+          break;
+
+        case "Delete":
+          let last = result.innerText.substr(0, result.innerText.length - 1);
+          result.innerText = last;
+          content = last;
+          if (result.innerText === "") {
+            result.innerText = "0";
+            content = "";
+          }
+          break;
+
+        case "C":
+          result.innerText = "0";
+          content = "";
+          break;
+
+        case "CE":
+          result.innerText = "0";
+          content = "";
+          break;
+
+        case "+":
+          if (result.innerText === "0") {
+            result.innerText = "0";
+          } else {
+            content += value;
+            result.innerText = content;
+          }
+          break;
+
+        case "-":
+          if (result.innerText === "0") {
+            result.innerText = "0";
+          } else {
+            content += value;
+            result.innerText = content;
+          }
+          break;
+
+        case "/":
+          if (result.innerText === "0") {
+            result.innerText = "0";
+          } else {
+            content += value;
+            result.innerText = content;
+          }
+          break;
+
+        case "*":
+          if (result.innerText === "0") {
+            result.innerText = "0";
+          } else {
+            content += value;
+            result.innerText = content;
+          }
+          break;
+
+        default:
+          content += value;
+          result.innerText = content;
+      }
+    });
+  });
+
+
+
+</script>
+
+</html>

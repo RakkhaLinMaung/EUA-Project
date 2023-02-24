@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+	font-family: sans-serif;
+	color: #3e3b3b;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+	padding-top: 5%;
+}
+
+
+.about-title {
+	font-size: 28.0px;
+	color: #6aab28;
+	line-height: 1.625em;
+	padding-top: 20px;
+	padding-bottom: 15px;
+
+}
+
+
+.line {
+	background-color: #e9e8e8;
+	width: 200px;
+	max-width: 90%;
+	height: 3px;
+	border: none;
+	margin-left: 41%;
+
+}
+
+
+.subtitle {
+	font-size: 84.615%;
+	padding: 20px;
+	color:cadetblue;
+}
+
+.para {
+	padding: 10px 0px 40px;
+	font-size: 14px;
+	line-height: 1.75em;
+	margin: 0% 5%;
+}
+
+
+.AD-profile img {
+	width: 20%;
+	border-radius: 50%;
+
+}
+
+.Name h4 {
+	color: #6aab28;
+	padding: 30px;
+}
+
+.substitle1 {
+	font-size: 84.615%;
+	padding-bottom: 15px;
+	padding: 2px 0px 20px;
+}
+
+.para1 {
+	font-size: 14px;
+	line-height: 1.75em;
+	padding-left: 20px;
+
+}
+
+.Member1 {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 0px;
+	padding-top: 40px;
+
+
+}
+
+.Member-info img {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.wah {
+	padding-left: 120px;
+
+}
+
+.wai {
+	padding-right: 120px;
+
+}
+
+
+.Member2 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 20px;
+	padding-top: 40px;
+}
+
+.Member-info2 img {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.capt1 {
+	color: #6aab28;
+	text-align: center;
+	padding: 20px;
+}
+
+.capt2 {
+	font-size: 84.615%;
+	padding: 5px 0px 20px;
+}
+
+.capt-wah {
+	color: #6aab28;
+	text-align: center;
+	padding: 15px 0px 15px 120px;
+
+}
+
+.capt-wah1 {
+	font-size: 84.615%;
+	text-align: center;
+	padding: 15px 0px 15px 120px;
+}
+
+.capt-wai {
+	color: #6aab28;
+	text-align: center;
+	padding: 15px 120px 15px 0px;
+}
+
+.capt-wai1 {
+	font-size: 84.615%;
+	text-align: center;
+	padding: 15px 120px 15px 0px;
+}
+
+.guest-grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	width: 100%;
+	grid-gap: 30px;
+}
+
+.guestreview {
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #69910d;
+	padding: 10px 0px 20px;
+
+}
+
+.review {
+	color: #6aab28;
+	text-align: -webkit-match-parent;
+	background-color: #F2F5EE;
+	padding: 20px;
+	font-family: arial;
+	font-size: 90%;
+	line-height: 1.75em;
+	border-radius: 15px;
+
+}
+
+.name {
+	font-weight: bold;
+	font-size: 84.615%;
+	color: #384990;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.address {
+	font-size: 80%;
+	color: #6aab28;
+	font-family: arial;
+	text-align: left;
+	padding-left: 20px;
+}

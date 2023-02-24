@@ -1,0 +1,175 @@
+/* Rakkha Lin Maung Coding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+.wrapper-mysci {
+    background-image: url("../img/2.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 9pt;
+}
+
+.description {
+    position: absolute;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-size: 9pt;
+    display: none;
+}
+
+.calc-container {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    border: 1px solid white;
+    box-shadow: 1px 2px 13px skyblue;
+    border-radius: 4px;
+}
+
+h1 {
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oleo Script';
+    user-select: none;
+    text-shadow: 1px 2px 5px dodgerblue;
+}
+
+.monitor {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 12px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 2px 13px skyblue;
+    padding: 12px;
+    text-align: right;
+    background-color: transparent;
+    color: white;
+    font-size: 14pt;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6,
+.row7,
+.row8 {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row1 small,
+.row2 small,
+.row3 small,
+.row4 small {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1 button,
+.row2 button,
+.row3 button,
+.row4 button {
+    width: 50px;
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.row5 small,
+.row6 small,
+.row7 small,
+.row8 small {
+    width: 60px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* button */
+.row5 button,
+.row6 button,
+.row7 button,
+.row8 button {
+    width: 60px;
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.wrapper small {
+    font-size: 4pt;
+    color: white;
+    user-select: none;
+    font-family: 'Questrial';
+}
+
+.wrapper button {
+    font-size: 7pt;
+    background-color: rgba(0, 0, 0, 0.384);
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 13px skyblue;
+    font-family: 'Questrial';
+}
+
+button:hover {
+    background-color: skyblue;
+    transition: 0.5s;
+}
+
+.brief-description {
+    position: fixed;
+    padding: 0 12pt 0 12pt;
+    font-size: 8pt;
+    background-color: #070707b4;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    font-size: 12pt;
+  }
+
+  .brief-description::after {
+    position: fixed;
+    content: '';
+    width: 1px;
+    height: 15px;
+    transform: translateY(1px);
+    background-color: rgb(255, 255, 255);
+    animation: sparkle 0.4s infinite;
+  }
+
+  @keyframes sparkle {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }

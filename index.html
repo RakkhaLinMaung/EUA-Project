@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUA Project</title>
+    <link type="text/css" rel="stylesheet" href="res/main.css">
+    <link rel="stylesheet" type="text/css" href="res/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="res/cardslider.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="res/responsive.css">
+    <!---we had linked our css file----->
+</head>
+
+<body>
+    <div class="full-page">
+        <!-- start navigation bar -->
+        <div class="navbar">
+            <div class="blog-title">
+                <a href="" class="tit">EUA Project</a>
+            </div>
+            <div class="hamburger">
+                <div class="hamburger-btn"></div>
+            </div>
+            <nav id='MenuItems'>
+                <a href='#'>Home</a>
+                <a href='./pages/aboutus.html'>About Us</a>
+                <ul id="menu">
+                    <li class="parent"><a href="#">Calculator</a>
+                        <ul class="child">
+                            <li class="parent">
+                                <a href="#">Math<span class="expand"></span></a>
+                                <ul class="child">
+                                    <li><a href="./calc/sim-calculator.html">Simple Calculator</a></li>
+                                    <li><a href="./calc/mysci-calc.html">Scientific Calculator</a></li>
+                                    <li><a href="./calc/numerical.html">Numerical Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Health<span class="expand"></span></a>
+                                <ul class="child">
+                                    <li><a href="./calc/bmi.html">BMI Calculator</a></li>
+                                    <li><a href="#">Comming Soon...</a></li>
+                                    <li><a href="#">Comming Soon...</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#">Other<span class="expand"></span></a>
+                                <ul class="child">
+                                    <li><a href="#">Length Converter</a></li>
+                                    <li><a href="./calc/dgclock.html">Digital Clock</a></li>
+                                    <li><a href="#">Random Num Generator</a></li>
+                                    <li><a href="#">Currency Converter</a></li>
+                                    <li><a href="#">Visual Keyboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a class="login-btn" onclick="document.getElementById('login-form').style.display='flex'">Login</a>
+            </nav>
+        </div>
+        <!-- end navigation bar -->
+        <!-- start login form -->
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' name="signinemail" class='input-field' placeholder='Email Id' required>
+                    <input type='password' name="signinpassword" class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' name="checksignin" class='check-box'><span>Remember Password</span>
+                    <button class='submit-btn' onclick="logIn()">Log in</button>
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name ' required>
+                    <input type='email' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- end login form -->
+
+        <div class="showcase">
+            <div class="big"><img src="img/eua.png"></div>
+            <div class="slide">
+                <marquee>
+                    <h2>EVERYBODY USE ANYWHRE</h2>
+                    <p>Personalized itineraries for unique travel
+                        styles. Create your passion and preferences with our customized
+                        tour.</p>
+                </marquee><br>
+            </div>
+        </div>
+
+        <div class="eua-container">
+            <h2 class="hometitle">
+                EUA Group is an responsible and accredited inbound IT Technology Group based in Naypyitaw,
+                Myanmar.
+            </h2>
+            <hr class="homeline" align="center"><br>
+            <div class="para">
+                The EUA Project's sole focus is to provide fast, comprehensive, convenient, free online
+                calculators in a plethora of areas. Currently, we have around 200 calculators to help you "do
+                the math" quickly in areas such as finance, fitness, health, math, and others, and we are still
+                developing more. Our goal is to become the one-stop, go-to site for people who need to make
+                quick calculations. Additionally, we believe the internet should be a source of free
+                information. Therefore, all of our tools and services are completely free, with no registration
+                required.<br><br>
+
+                We coded and developed each calculator individually and put each one through strict,
+                comprehensive testing. However, please inform us if you notice even the slightest error – your
+                input is extremely valuable to us. While most calculators on Calculator.net are designed to be
+                universally applicable for worldwide usage, some are for specific countries only. For example,
+                the Income Tax Calculator is for United States residents only.
+
+            </div>
+            <h3 class="homesubtitle">Our Featured Experiences</h3><br>
+            <p class="homesubtitle p">We are providing effective services for People who are facing some issues in the
+                environment of
+                Healthy, Education, Livelihood and Social. These would be fixed, if you just contact us! You
+                need EUA, every body needs EUA.</p>
+            <pre class="homesubtitle p"><b>||One Stop Services ||</b></pre><i><a class="homesubtitle"
+                    style="display: block; text-align:left">#EUA Project</a></i>
+        </div>
+        <h4 class="home-team-heading">Our Valuable Team</h4>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+
+                    <!-------------------------------------First---------------------------------->
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="img/team_img/ptz.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Mr. Phyo Thaw Zin</h2>
+                            <p class="description">Executive Manager of EUA project.</p>
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <!-------------------------------------First---------------------------------->
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="img/team_img/nla.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Mr. Nay Hlaing Aung</h2>
+                            <p class="description">Technical Advisor of EUA Project</p>
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+
+                    <!-------------------------------------First---------------------------------->
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="img/team_img/kms.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Mrs.Khin Myint Sein</h2>
+                            <p class="description">Finance Officer of EUA Project</p>
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <!-------------------------------------First---------------------------------->
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="img/team_img/lyyw.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Mrs.LaceYeYeWin</h2>
+                            <p class="description">Web Developer of EUA Project</p>
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <!-------------------------------------First---------------------------------->
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="img/team_img/ssk.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Mr.Soe Soe Kyaw</h2>
+                            <p class="description">Web Developer of EUA Project</p>
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <!-------------------------------------First---------------------------------->
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="img/team_img/nl.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Mr.Nay Lin</h2>
+                            <p class="description">Supporting Developer of EUA Project</p>
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------------First---------------------------------->
+
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+        <!------------------------ Guest Review ---------------------->
+        <h2 class="guestreview" align="center"><b>Guest Reviews</b></h2><br>
+        <div class="homereview">
+            <div class="left">
+                <div class="review">
+                    EUA project is the most suitable and must exist project for all people and that is a
+                    project with the effective of solving problem. Kind of easy and much helpful for public.
+                    Many services are included and with payable prices.
+                </div><br>
+                <div class="name">Ms.Su Sandi Aung</div>
+                <div class="address">Naypyitaw</div>
+            </div>
+            <div class="right">
+                <div class="review">
+                    In our daily life, everyone has some issues and problems. Although it can't be obsticle
+                    for us, we need to solve it and recover from those issues. EUA project can help! Most
+                    user-comfortable project and easy to use.
+                </div><br>
+                <div class="name">Ms.Thinzar May Phoo Wai</div>
+                <div class="address">Naypyitaw</div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------FOOT----------------------------------------------->
+        <footer>
+            <h3 class="homesubtitle">Our Affiliations and Memberships</h3><br>
+            <div class="sponsor">
+                <img class="yoma" src="img/yoma.png">
+                <img class="kbz" src="img/kbz-logo.png">
+                <img class="mp" src="img/mp.png">
+                <img class="moht" src="img/moht.png">
+                <img class="union" src="img/union.webp">
+                <img class="mandlar" src="img/mandalarmin.png">
+            </div>
+            <div class="sub-footer">
+                <div class="navigatetotop"><img src="./img/icons/Navigator.png"></div>
+                <div class="col-1">
+                    <h3 class="cont-heading">USEFUL LINKS</h3>
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Calculator</a>
+                    <a href="">Contact</a>
+                    <a href="">Login</a>
+                </div>
+                <div class="col-2">
+                    <h3 class="cont-heading">NEWSLETTER</h3>
+                    <form>
+                        <input type="text" placeholder="Your Email Address" required><br>
+                        <button type="submit">SUBSCRIBE NOW</button><br><br><br>
+                        <p>Developed by EUA Team</p><br>
+                        <p>© 2023 EUA Team's Template </p>
+                    </form>
+                </div>
+                <div class="col-3">
+                    <h3 class="cont-heading">CONTACT</h3>
+                    <p>Group-4, EUA Project,<br><br> Naypyitaw, Myanmar.</p>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-telegram"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
+
+<!-- Swiper JS -->
+<script src="res/swiper-bundle.min.js" type="text/javascript"></script>
+<!-- Javascript -->
+<script src="res/slide.js" type="text/javascript"></script>
+<script src="res/act.js" type="text/JavaScript"></script>
+</body>
+
+</html>

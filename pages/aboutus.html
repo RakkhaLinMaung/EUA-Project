@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="./res/aboutus.css">
+	<link rel="stylesheet" href="../res/main.css">
+	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../res/responsive.css">
+</head>
+
+<body>
+	<!-- start navigation bar -->
+	<div class="navbar">
+		<div class="blog-title">
+			<a href="" class="tit">EUA Project</a>
+		</div>
+		<div class="hamburger">
+			<div class="hamburger-btn"></div>
+		</div>
+		<nav id='MenuItems'>
+			<a href='../index.html'>Home</a>
+			<a href='#'>About Us</a>
+			<ul id="menu">
+				<li class="parent"><a href="#">Calculator</a>
+					<ul class="child">
+						<li class="parent">
+							<a href="#">Math<span class="expand"></span></a>
+							<ul class="child">
+								<li><a href="../calc/sim-calculator.html">Simple Calculator</a></li>
+								<li><a href="../calc/mysci-calc.html">Scientific Calculator</a></li>
+								<li><a href="../calc/numerical.html">Numerical Calculator</a></li>
+							</ul>
+						</li>
+						<li class="parent">
+							<a href="#">Health<span class="expand"></span></a>
+							<ul class="child">
+								<li><a href="../calc/bmi.html">BMI Calculator</a></li>
+								<li><a href="#">Coming Soon ...</a></li>
+								<li><a href="#">Coming Soon ...</a></li>
+							</ul>
+						</li>
+						<li class="parent">
+							<a href="#">Other<span class="expand"></span></a>
+							<ul class="child">
+								<li><a href="#">Length Converter</a></li>
+								<li><a href="../calc/dgclock.html">Digital Clock</a></li>
+								<li><a href="#">Random Num Generator</a></li>
+								<li><a href="#">Visual Keyboard</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<a class="login-btn" onclick="document.getElementById('login-form').style.display='flex'">Login</a>
+		</nav>
+	</div>
+	<!-- end navigation bar -->
+
+	<div id='login-form' class='login-page'>
+		<div class="form-box">
+			<div class='button-box'>
+				<div id='btn'></div>
+				<button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+				<button type='button' onclick='register()' class='toggle-btn'>Register</button>
+			</div>
+			<form id='login' class='input-group-login'>
+				<input type='text' class='input-field' placeholder='Email Id' required>
+				<input type='password' class='input-field' placeholder='Enter Password' required>
+				<input type='checkbox' class='check-box'><span>Remember Password</span>
+				<button type='submit' class='submit-btn'>Log in</button>
+			</form>
+			<form id='register' class='input-group-register'>
+				<input type='text' class='input-field' placeholder='First Name' required>
+				<input type='text' class='input-field' placeholder='Last Name ' required>
+				<input type='email' class='input-field' placeholder='Email Id' required>
+				<input type='password' class='input-field' placeholder='Enter Password' required>
+				<input type='password' class='input-field' placeholder='Confirm Password' required>
+				<input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+				<button type='submit' class='submit-btn'>Register</button>
+			</form>
+		</div>
+	</div>
+	
+
+	<div class="container">
+
+		<div>
+			<h2 class="about-title">About Us</h2>
+		</div>
+		<div>
+			<hr class="line"><br><br>
+		</div>
+		<div class="subtitle"><b>Our Vision</b></div>
+		<div class="para"> Be the trusted, reliable, unique tour operator in Myanmar. </div>
+		<div class="subtitle"><b>Our Mission</b></div>
+		<div class="para"> To become the most trusted and innovative travel company with local expertise in the travel
+			industry providing socially responsible travel experiences, unique, reliable and highly personalized
+			services to all our customers.</div>
+
+
+		<div class="AD-profile"><img src="../img/team_img/ptz.jpg"></div>
+		<div class="Name">
+			<h4>U Phyo Thaw Zin</h4>
+		</div>
+		<div class="substitle1"><b>EUA Project Manager</b></div>
+		<div class="para1"> We are a group of IT professionals enthusiastic in creating quality free tools and content
+			on the Internet. The main purpose of this website is to provide a comprehensive collection of free online
+			calculators for ease of public use. This site was launched on calculators.info first in 2007. In 2008, we
+			migrated to calculator.net.<br>The calculators on this site were grouped into 4 sections: financial, fitness
+			& health, math, and others. All of the calculators were developed in-house. Some calculators use open-source
+			JavaScript components under different open-source licenses. More than 90% of the calculators are based on
+			well-known formulas or equations from textbooks, such as the mortgage calculator, BMI calculator, etc. If
+			formulas are controversial, we provide the results of all popular formulas, as can be seen in the Ideal
+			Weight Calculator. Calculators such as the love calculator that are solely meant for amusement are based on
+			internal formulas. The results of the financial calculators were reviewed by our financial advisors, who
+			work for major personal financial advising firms. The results of the health calculators were reviewed and
+			approved by local medical doctors. More than 99% of the descriptive content was developed in-house with a
+			small amount of content taken from wikipedia.org under the GNU Free Documentation License. The descriptive
+			content of the financial calculators was created and reviewed by our financial team. The descriptive content
+			of the health calculators was reviewed by local medical doctors.<br>This site is owned and operated by Maple
+			Tech. International LLC.</div>
+
+
+
+		<div class="Member1">
+
+			<div class="Member-info">
+				<div class="wah"><img src="../img/team_img/kms.jpg"></div>
+				<div class="image-caption">
+					<p class="capt-wah"><b>Daw Khin Myint Sein</b></p>
+					<p class="capt-wah1"><b>Finance Officer(EUA Project)</b></p>
+				</div>
+			</div>
+			<div class="Member-info">
+				<div class="wai"><img src="../img/team_img/lyyw.jpg"></div>
+				<div class="image-caption">
+					<p class="capt-wai"><b>Daw Lae Yin Yin Win</b></p>
+					<p class="capt-wai1"><b>Web Developer</b></p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="Member2">
+
+			<div class="Member-info2">
+				<img src="../img/team_img/nla.jpg">
+				<div class="image-caption">
+					<p class="capt1"><b>U Nay Hlaing Aung</b></p>
+					<p class="capt2"><b>Technical Advisor(EUA Project)</b></p>
+				</div>
+			</div>
+			<div class="Member-info2">
+				<img src="../img/team_img/ssk.jpg">
+				<div class="image-caption">
+					<p class="capt1"><b>U Soe Soe Kyaw</b></p>
+					<p class="capt2"><b>Web Developer</b></p>
+				</div>
+			</div>
+			<div class="Member-info2">
+				<img src="../img/team_img/nl.jpg">
+				<div class="image-caption">
+					<p class="capt1"><b>U Nay Lin</b></p>
+					<p class="capt2"><b>Designer</b></p>
+				</div>
+			</div>
+
+		</div>
+
+
+		<h2 class="guestreview" align="center"><b>Guest Reviews</b></h2><br>
+		<div class="guest-grid">
+
+			<div>
+				<div class="review">Features on this tour operator are most valuable things. One stop service conduct its works timely and properly. Comfortable service fees and being a unique one. I love this project! Our job is kind of doing calculation and solving Mathematical equations.</div><br>
+				<div class="name">- Mr.Htet Lin Phyo</div>
+				<div class="address">Ministry of Sports</div>
+			</div>
+
+			<div>
+				<div class="review">Wow! Project name perfectly fit its actions. Although it is for free for all users, it worths to kill the time on this blog. I am fresher student of Singapore University. It is the place I spend my time by calculating and getting answer about Math.</div><br>
+				<div class="name">- Ms.Thandar Myint Aung</div>
+				<div class="address">Singapore</div>
+			</div>
+
+			<div>
+				<div class="review">I am from Malaysia. I found this web pages status on tiktok. This is cool. Fistly, one of my friends told me about this one stop servce (OSS). Later, I found and realize it is worth to keep the time on this blog!</div><br>
+				<div class="name">- Mr.Er Siew Geok</div>
+				<div class="address">Malaysia</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<!------------------------------------------------------FOOT----------------------------------------------->
+	<footer>
+		<h3 class="homesubtitle">Our Affiliations and Memberships</h3><br>
+		<div class="sponsor">
+			<img class="yoma" src="../img/yoma.png">
+			<img class="kbz" src="../img/kbz-logo.png">
+			<img class="mp" src="../img/mp.png">
+			<img class="moht" src="../img/moht.png">
+			<img class="union" src="../img/union.webp">
+			<img class="mandlar" src="../img/mandalarmin.png">
+		</div>
+		<div class="sub-footer">
+			<div class="navigatetotop"><img src="../img/icons/navigator.png"></div>
+			<div class="col-1">
+				<h3 class="cont-heading">USEFUL LINKS</h3>
+				<a href="">Home</a>
+				<a href="">About</a>
+				<a href="">Calculator</a>
+				<a href="">Contact</a>
+				<a href="">Login</a>
+			</div>
+			<div class="col-2">
+				<h3 class="cont-heading">NEWSLETTER</h3>
+				<form>
+					<input type="text" placeholder="Your Email Address" required><br>
+					<button type="submit">SUBSCRIBE NOW</button><br><br><br>
+					<p>Developed by EUA Team</p><br>
+					<p>© 2023 EUA Team's Template </p>
+				</form>
+			</div>
+			<div class="col-3">
+				<h3 class="cont-heading">CONTACT</h3>
+				<p>Group-4, EUA Project,<br><br> Naypyitaw, Myanmar.</p>
+				<div class="social-icons">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-brands fa-twitter"></i>
+					<i class="fa-brands fa-telegram"></i>
+					<i class="fa-brands fa-instagram"></i>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/JavaScript" src="../res/act.js"></script>
+</body>
+
+</html>

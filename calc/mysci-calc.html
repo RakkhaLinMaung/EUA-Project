@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link type="text/css" rel="stylesheet" href="res/mysci-calc.css">
+    <link type="text/css" rel="stylesheet" href="../res/main.css">
+    <link type="text/css" rel="stylesheet" href="../res/responsive.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="blog-title">
+            <a href="" class="tit">EUA Project</a>
+        </div>
+        <div class="hamburger">
+            <div class="hamburger-btn"></div>
+        </div>
+        <nav id='MenuItems'>
+            <a href='../index.html'>Home</a>
+            <a href='../pages/aboutus.html'>About Us</a>
+            <ul id="menu">
+                <li class="parent"><a href="#">Calculator</a>
+                    <ul class="child">
+                        <li class="parent">
+                            <a href="#">Math<span class="expand"></span></a>
+                            <ul class="child">
+                                <li><a href="../calc/sim-calculator.html">Simple Calculator</a></li>
+                                <li><a href="../calc/mysci-calc.html">Scientific Calculator</a></li>
+                                <li><a href="../calc/numerical.html">Numerical Calculator</a></li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Health<span class="expand"></span></a>
+                            <ul class="child">
+                                <li><a href="../calc/bmi.html">BMI Calculator</a></li>
+                                <li><a href="#">Coming Soon...</a></li>
+                                <li><a href="#">Coming Soon...</a></li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Other<span class="expand"></span></a>
+                            <ul class="child">
+                                <li><a href="#">Length Converter</a></li>
+                                <li><a href="../calc/dgclock.html">Digital Clock</a></li>
+                                <li><a href="#">Random Num Generator</a></li>
+                                <li><a href="#">Currency Converter</a></li>
+                                <li><a href="#">Visual Keyboard</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <a class="login-btn" onclick="document.getElementById('login-form').style.display='flex'">Login</a>
+        </nav>
+    </div>
+
+    <!-- start login form -->
+    <div id='login-form' class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='checkbox' class='check-box'><span>Remember Password</span>
+                <button type='submit' class='submit-btn'>Log in</button>
+            </form>
+            <form id='register' class='input-group-register'>
+                <input type='text' class='input-field' placeholder='First Name' required>
+                <input type='text' class='input-field' placeholder='Last Name ' required>
+                <input type='email' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='password' class='input-field' placeholder='Confirm Password' required>
+                <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                <button type='submit' class='submit-btn'>Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- end login form -->
+    
+    <div class="wrapper-mysci">
+        <div class="brief-description"></div>
+        <h1>Scientific Calculator</h1>
+        <section class="calc-container">
+            <input type="text" id="monitor" class="monitor"><span class="history"></span>
+            <div class="row1">
+                <small>x<sup>2</sup></small>
+                <small>x<sup>3</sup></small>
+                <small>x<sup>4</sup></small>
+                <small>x<sup>5</sup></small>
+                <small>x<sup>6</sup></small>
+                <small>x<sup>7</sup></small>
+            </div>
+            <div class="row1">
+                <button onclick="x2()">x<sup>2</sup></button>
+                <button onclick="x3()">x<sup>3</sup></button>
+                <button onclick="x4()">x<sup>4</sup></button>
+                <button onclick="x5()">x<sup>5</sup></button>
+                <button onclick="x6()">x<sup>6</sup></button>
+                <button onclick="x7()">x<sup>7</sup></button>
+            </div>
+            <div class="row2">
+                <small>x<sup>9</sup></small>
+                <small>Log</small>
+                <small>In</small>
+                <small>e<sup style="transform: translateY(-2px)">x</sup></small>
+                <small>cot</small>
+                <small>cotx</small>
+            </div>
+            <div class="row2">
+                <button onclick="x9()">x<sup>9</sup></button>
+                <button onclick="log()">Log</button>
+                <button onclick="i_n()">In</button>
+                <button onclick="exp()">e<sup>x</sup></button>
+                <button onclick="cot()">cot</button>
+                <button onclick="coth()">coth</button>
+            </div>
+            <div class="row3">
+                <small>asinh</small>
+                <small>asin</small>
+                <small>sinh</small>
+                <small>sin</small>
+                <small>cos</small>
+                <small>cosh</small>
+            </div>
+            <div class="row3">
+                <button onclick="asinh()">asinh</button>
+                <button onclick="asin()">asin</button>
+                <button onclick="sinh()">sinh</button>
+                <button onclick="sin()">sin</button>
+                <button onclick="cos()">cos</button>
+                <button onclick="cosh()">cosh</button>
+            </div>
+            <div class="row4">
+                <small>acos</small>
+                <small>acosh</small>
+                <small>tan</small>
+                <small>tanh</small>
+                <small>atan</small>
+                <small>atanh</small>
+            </div>
+            <div class="row4">
+                <button onclick="acos()">acos</button>
+                <button onclick="acosh()">acosh</button>
+                <button onclick="tan()">tan</button>
+                <button onclick="tanh()">tanh</button>
+                <button onclick="atan()">atan</button>
+                <button onclick="atanh()">atanh</button>
+            </div>
+            <div class="row5">
+                <small>M</small>
+                <small>G</small>
+                <small>T</small>
+                <small>INS</small>
+                <small>OFF</small>
+            </div>
+            <div class="row5">
+                <button onclick="num('7')">7</button>
+                <button onclick="num('8')">8</button>
+                <button onclick="num('9')">9</button>
+                <button onclick="del()">DEL</button>
+                <button onclick="ac()">AC</button>
+            </div>
+
+            <div class="row6">
+                <small>MAT</small>
+                <small>VCT</small>
+                <small>K</small>
+                <small>nPr</small>
+                <small>nCr</small>
+            </div>
+            <div class="row6">
+                <button onclick="num('4')">4</button>
+                <button onclick="num('5')">5</button>
+                <button onclick="num('6')">6</button>
+                <button onclick="num('*')">x</button>
+                <button onclick="num('/')">/</button>
+            </div>
+            <div class="row7">
+                <small>S-SUM</small>
+                <small>S-VAR</small>
+                <small>DISTR</small>
+                <small>e=0</small>
+                <small>a+bi</small>
+            </div>
+            <div class="row7">
+                <button onclick="num('1')">1</button>
+                <button onclick="num('2')">2</button>
+                <button onclick="num('3')">3</button>
+                <button onclick="num('+')">+</button>
+                <button onclick="num('-')">-</button>
+            </div>
+            <div class="row8">
+                <small>RND</small>
+                <small>RAN#</small>
+                <small>!@</small>
+                <small>DRG</small>
+                <small>Re-IM</small>
+            </div>
+            <div class="row8">
+                <button onclick="num('0')">0</button>
+                <button onclick="num('.')">.</button>
+                <button onclick="exp()">EXP</button>
+                <button onclick="solve()">ANS</button>
+                <button onclick="solve()">=</button>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <h3 class="homesubtitle">Our Affiliations and Memberships</h3><br>
+        <div class="sponsor">
+            <img class="yoma" src="../img/yoma.png">
+            <img class="kbz" src="../img/kbz-logo.png">
+            <img class="mp" src="../img/mp.png">
+            <img class="moht" src="../img/moht.png">
+            <img class="union" src="../img/union.webp">
+            <img class="mandlar" src="../img/mandalarmin.png">
+        </div>
+        <div class="sub-footer">
+            <div class="navigatetotop"><img src="../img/icons/Navigator.png"></div>
+            <div class="col-1">
+                <h3 class="cont-heading">USEFUL LINKS</h3>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Calculator</a>
+                <a href="">Contact</a>
+                <a href="">Login</a>
+            </div>
+            <div class="col-2">
+                <h3 class="cont-heading">NEWSLETTER</h3>
+                <form>
+                    <input type="text" placeholder="Your Email Address" required><br>
+                    <button type="submit">SUBSCRIBE NOW</button><br><br><br>
+                    <p>Developed by EUA Team</p><br>
+                    <p>© 2023 EUA Team's Template </p>
+                </form>
+            </div>
+            <div class="col-3">
+                <h3 class="cont-heading">CONTACT</h3>
+                <p>Group-4, EUA Project,<br><br> Naypyitaw, Myanmar.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script type="text/JavaScript" src="./res/script.js"></script>
+<script type="text/JavaScript" src="../res/act.js"></script>
+
+</html>

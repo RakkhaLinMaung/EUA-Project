@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BMI Calculator</title>
+	<link rel="stylesheet" type="text/css" href="res/bmi.css">
+	<link rel="stylesheet" type="text/css" href="../res/main.css">
+	<link rel="stylesheet" type="text/css" href="../res/responsive.css">
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="blog-title">
+			<a href="" class="tit">EUA Project</a>
+		</div>
+		<div class="hamburger">
+			<div class="hamburger-btn"></div>
+		</div>
+		<nav id='MenuItems'>
+			<a href='../index.html'>Home</a>
+			<a href='../pages/aboutus.html'>About Us</a>
+			<ul id="menu">
+				<li class="parent"><a href="#">Calculator</a>
+					<ul class="child">
+						<li class="parent">
+							<a href="#">Math<span class="expand"></span></a>
+							<ul class="child">
+								<li><a href="../calc/sim-calculator.html">Simple Calculator</a></li>
+								<li><a href="../calc/mysci-calc.html">Scientific Calculator</a></li>
+								<li><a href="../calc/numerical.html">Numerical Calculator</a></li>
+							</ul>
+						</li>
+						<li class="parent">
+							<a href="#">Health<span class="expand"></span></a>
+							<ul class="child">
+								<li><a href="../calc/bmi.html">BMI Calculator</a></li>
+								<li><a href="#">Coming Soon...</a></li>
+								<li><a href="#">Coming Soon...</a></li>
+							</ul>
+						</li>
+						<li class="parent">
+							<a href="#">Other<span class="expand"></span></a>
+							<ul class="child">
+								<li><a href="#">Length Converter</a></li>
+								<li><a href="../calc/dgclock.html">Digital Clock</a></li>
+								<li><a href="#">Random Num Generator</a></li>
+								<li><a href="#">Currency Converter</a></li>
+								<li><a href="#">Visual Keyboard</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<a class="login-btn" onclick="document.getElementById('login-form').style.display='flex'">Login</a>
+		</nav>
+	</div>
+
+	<div id='login-form' class='login-page'>
+		<div class="form-box">
+			<div class='button-box'>
+				<div id='btn'></div>
+				<button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+				<button type='button' onclick='register()' class='toggle-btn'>Register</button>
+			</div>
+			<form id='login' class='input-group-login'>
+				<input type='text' class='input-field' placeholder='Email Id' required>
+				<input type='password' class='input-field' placeholder='Enter Password' required>
+				<input type='checkbox' class='check-box'><span>Remember Password</span>
+				<button type='submit' class='submit-btn'>Log in</button>
+			</form>
+			<form id='register' class='input-group-register'>
+				<input type='text' class='input-field' placeholder='First Name' required>
+				<input type='text' class='input-field' placeholder='Last Name ' required>
+				<input type='email' class='input-field' placeholder='Email Id' required>
+				<input type='password' class='input-field' placeholder='Enter Password' required>
+				<input type='password' class='input-field' placeholder='Confirm Password' required>
+				<input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+				<button type='submit' class='submit-btn'>Register</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="wrapper-bmi">
+		<div class="container-bmi">
+			<h2>BMI Calculator</h2>
+			<p class="text-bmi">Height</p>
+			<input type="text" id="height-bmi">
+			<p class="text-bmi">Weight</p>
+			<input type="text" id="weight-bmi">
+			<p id="result"></p>
+			<button onclick="bmi()">Calculate</button>
+			<p id="info">Please enter height [cm] and weight [kg]</p>
+		</div>
+
+
+
+	</div>
+
+	<footer>
+		<h3 class="homesubtitle">Our Affiliations and Memberships</h3><br>
+		<div class="sponsor">
+			<img class="yoma" src="../img/yoma.png">
+			<img class="kbz" src="../img/kbz-logo.png">
+			<img class="mp" src="../img/mp.png">
+			<img class="moht" src="../img/moht.png">
+			<img class="union" src="../img/union.webp">
+			<img class="mandlar" src="../img/mandalarmin.png">
+		</div>
+		<div class="sub-footer">
+			<div class="navigatetotop"><img src="../img/icons/Navigator.png"></div>
+			<div class="col-1">
+				<h3 class="cont-heading">USEFUL LINKS</h3>
+				<a href="">Home</a>
+				<a href="">About</a>
+				<a href="">Calculator</a>
+				<a href="">Contact</a>
+				<a href="">Login</a>
+			</div>
+			<div class="col-2">
+				<h3 class="cont-heading">NEWSLETTER</h3>
+				<form>
+					<input type="text" placeholder="Your Email Address" required><br>
+					<button type="submit">SUBSCRIBE NOW</button><br><br><br>
+					<p>Developed by EUA Team</p><br>
+					<p>© 2023 EUA Team's Template </p>
+				</form>
+			</div>
+			<div class="col-3">
+				<h3 class="cont-heading">CONTACT</h3>
+				<p>Group-4, EUA Project,<br><br> Naypyitaw, Myanmar.</p>
+				<div class="social-icons">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-brands fa-twitter"></i>
+					<i class="fa-brands fa-telegram"></i>
+					<i class="fa-brands fa-instagram"></i>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		function bmi() {
+			var h = document.getElementById("height-bmi").value;
+			var w = document.getElementById("weight-bmi").value;
+			var bmi = w / (h / 100 * h / 100);
+			var total = bmi.toFixed(2);
+			document.getElementById("result").innerHTML = "Your BMI is " + total;
+		}
+	</script>
+
+	<script type="text/JavaScript" src="../res/act.js"></script>
+</body>
+
+</html>

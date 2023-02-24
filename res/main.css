@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0))
+}
+
+
+.full-page {
+    width: 100%;
+    height: auto;
+}
+
+/*this block is background-image setting*/
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #a9a9a9;
+    align-items: center;
+    top: 0;
+}
+
+.hamburger {
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 21;
+}
+
+.hamburger.active {
+    position: fixed;
+    z-index: 21;
+}
+
+.hamburger-btn {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50px;
+    transition: all 0.3s;
+    z-index: 11;
+}
+
+.hamburger-btn.active {
+    background-color: transparent;
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.hamburger-btn::before {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50px;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+.hamburger-btn.active::before {
+    background-color: red;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.hamburger-btn::after {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50px;
+    transform: translateY(10px);
+    transition: all 0.3s;
+}
+
+.hamburger-btn.active::after {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    background-color: red;
+}
+
+.blog-title {
+    width: 30%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*layout setting for nav bar*/
+
+nav {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 50pt;
+}
+
+
+nav a {
+    width: 120px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 11pt;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+nav .login-btn {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+nav .login-btn:hover {
+    color: aqua;
+    width: 100px;
+    height: 60px;
+}
+
+nav a::before {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 40px;
+    border-bottom: 2px solid rgba(6, 181, 235, 0.753);
+}
+
+nav a:hover::before,
+nav a:hover,
+nav a.active {
+    color: aqua;
+    width: 120px;
+    transition: 0.5s;
+}
+
+/* ---------------- drop down --------------  style */
+.parent {
+    width: 170px;
+    display: block;
+    text-align: center;
+    position: relative;
+    float: left;
+    background-color: transparent;
+    transform: translate(0px, 0px);
+    z-index: 9;
+}
+
+.parent a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.parent:hover>ul {
+    display: block;
+    position: absolute;
+}
+
+.child {
+    display: none;
+}
+
+.child li {
+    background-color: #E4EFF7;
+    border-bottom: #CCC 1px solid;
+    border-right: #CCC 1px solid;
+    width: 100%;
+}
+
+.child li a {
+    color: #000000;
+    width: 170px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+ul ul ul {
+    left: 100%;
+    top: 0;
+    margin-left: 1px;
+}
+
+li:hover {
+    background-color: #95B4CA;
+}
+
+.parent li:hover {
+    background-color: #F0F0F0;
+}
+
+.expand {
+    position: absolute;
+    float: right;
+}
+
+
+
+/*Login-form*/
+
+#login-form {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    top: 0;
+    position: fixed;
+}
+
+.form-box {
+    width: 380px;
+    height: 550px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.945);
+    padding: 10px;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+    z-index: 9;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: greenyellow;
+    -webkit-text-stroke: #ffffff .5px;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #F3C693;
+    color: white;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group-login {
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-group-register {
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #F3C693;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 34px 0;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login {
+    left: 50px;
+}
+
+#login input {
+    color: white;
+    font-size: 15;
+}
+
+#register {
+    left: 450px;
+}
+
+#register input {
+    color: white;
+    font-size: 15;
+}
+
+
+/*--------------------login form end -------------------- */
+
+.showcase {
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    padding-top: 0px;
+    font-family: sans-serif;
+    color: #3e3b3b;
+    margin-bottom: 25pt;
+}
+
+
+
+.big {
+    width: 70px;
+    height: 50px;
+    padding-top: 15%;
+    padding-bottom: 8%;
+    padding-left: 41%;
+}
+
+.big img {
+    width: 250px;
+}
+
+.big img:hover {
+    transform: scale(1.2);
+    transition:transform 0.6s ease-in-out;
+    overflow: hidden;
+    border-bottom: 3px solid #95B4CA;
+}
+
+
+
+.slide {
+    width: 90%;
+    position: absolute;
+    color: whitesmoke;
+    transform: translateY(150pt);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.slide span {
+    color: white;
+}
+
+
+/*-------------------------- Blog intro text (main text) ---------------- */
+.eua-container {
+    padding-left: 145pt;
+    padding-right: 145pt;
+}
+
+.hometitle {
+    font-family: sans-serif;
+    font-size: 28.0px;
+    color: #6aab28;
+    line-height: 1.625em;
+    text-align: center;
+}
+
+
+.homeline {
+    background-color: #e9e8e8;
+    width: 224px;
+    max-width: 90%;
+    height: 3px;
+    border: none;
+    margin-left: 40%;
+    margin-top: 4%;
+}
+
+.para {
+    text-align: center;
+    line-height: 1.75em;
+    color: #78910a;
+}
+
+.homesubtitle {
+    color: #69910d;
+    margin-top: 5%;
+    text-align: center;
+    /*    margin-bottom: 3%;*/
+
+}
+
+.homesubtitle.p {
+    color: #78910a;
+    text-align: justify;
+}
+
+.home-team-heading {
+    text-align: center;
+    transform: translateY(45pt);
+    font-size: 22pt;
+    text-transform: uppercase;
+}
+
+/*-------------------------- Portfolio Team Profiles --------------- */
+
+.guestreview {
+    color: #384990;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 0.5em;
+    margin-bottom: 3%;
+}
+
+.homereview {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 3%;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.review {
+    color: #6aab28;
+    text-align: -webkit-match-parent;
+    background-color: #F2F5EE;
+    padding: 10px;
+    font-family: arial;
+    font-size: 90%;
+    line-height: 1.75em;
+    border-radius: 15px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 84.615%;
+    color: #384990;
+    margin-left: 1%;
+}
+
+.address {
+    font-size: 80%;
+    color: #6aab28;
+    font-family: arial;
+    padding-top: 1%;
+    margin-left: 1%;
+}
+
+
+/*-----------------------------------------------------------FOOT----------------------------------------------*/
+footer {
+    width: 100%;
+    /* This is for initialization of footer */
+}
+
+.sponsor {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightblue; */
+}
+
+/* Images */
+
+.sponser img {
+    margin: 12px;
+}
+
+.yoma {
+    width: 200px;
+}
+
+.kbz {
+    width: 200px;
+}
+
+.mp {
+    width: 100px;
+}
+
+.moht {
+    width: 100px;
+}
+
+.union {
+    width: 100px;
+}
+
+.mandlar {
+    width: 150px;
+}
+
+.sub-footer {
+    margin-top: 50px;
+    width: 100%;
+    padding: 100px 15%;
+    background-color: #373B46;
+    color: #efefef;
+    display: flex;
+}
+
+.sub-footer div {
+    /* Common (related with all div in footer)*/
+    text-align: center;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 20px;
+    font-size: 11pt;
+}
+
+
+.col-2 {
+    flex-grow: 3;
+}
+
+.cont-heading {
+    /* related with all sub-footer h3 */
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+.col-2 form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+.col-2 form input:focus {
+    border: 2px solid #6aab28;
+    transition: 0.1s;
+}
+
+
+.col-2 form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+.col-2 form button:hover {
+    transition: 0.3s;
+    border: 2px solid #6aab28;
+    color: #6aab28
+}
+
+
+.social-icons {
+    margin-top: 30px;
+}
+
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.navigatetotop {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    margin-right: 22pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg) translateX(-35pt);
+}
+
+.navigatetotop img {
+    width: 30px;
+    height: 30px;
+    border-image-outset: 0cqh;
+    border-radius: 12px;
+    border: 1px solid #384990;
+}
