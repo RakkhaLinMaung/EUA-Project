@@ -5,6 +5,14 @@
         width: auto;
     }
 
+    .blog-title {
+        width: 70%;
+    }
+
+    .tit {
+        width: 70%;
+    }
+
     .hamburger {
         position: absolute;
         display: flex;
